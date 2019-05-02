@@ -1,6 +1,6 @@
 %% Esempio per lo stile supsi
 \documentclass[twoside]{supsistudent} 
-
+\usepackage{graphicx}
 % per settare noindent
 \setlength{\parindent}{0pt}
 
@@ -50,24 +50,87 @@
 \setcounter{page}{1}
 
 \chapter*{Abstract}
-\lipsum[10]
+\textit{DocTT} is a tagging tool which allows its users to tag text documents such as
+press conferences or pitches. The tags take form in coloured rectangles
+surrounding the text allowing a fast and easy visual recognition of a tag.
+Tags are defined through a pre-uploaded tree by the user. The files involved
+(document files and tree files) follow the XML standard and their parsing is 
+managed by the tool.
 
 \chapter*{Riassunto}
 \lipsum[10]
 
-\chapter{Titolazione}
+\chapter{Introduzione}
 
-\lipsum[13]
+\section{Struttura}
 
-\section{Sezione}
+\textit{DocTT} si divide in 4 sezioni ognuna adibita ad una funzione specifica:
+\begin{itemize}
+  \item Home
+  \item Document Upload
+  \item Tree View
+  \item Tree Upload
+\end{itemize}
 
-\lipsum[23]
-Esempio di citazione \cite{4538384}, \cite{5357331,4523385}, \cite{1705631}.
-\footnote{Questa \`e una nota a pi\'e di pagina.}
-\footnote{Questa \`e un'altra nota a pi\'e di pagina.}
-\lipsum[23]
+\subsection{Home}
+La \textbf{Home} di \textit{DocTT} è la sezione in cui viene presentata la 
+lista dei documenti caricati, dalla quale è possibile accedere ai documenti 
+singoli e quindi alla loro modifica.
 
-\subsection{Sotto sezione}
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{figures/home.png}
+  \caption{Home section}
+  \label{fig:home}
+\end{figure}
+
+\pagebreak
+
+\subsection{Document Upload}
+La sezione \textbf{Document Upload} di \textit{DocTT} è quella che permette
+l'upload dei documenti da taggare ed il loro salvataggio nello storage del 
+browser.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{figures/docUpload.png}
+  \caption{Document Upload section}
+  \label{fig:docUpload}
+\end{figure}
+
+\subsection{Tree View}
+La sezione \textbf{Tree View} di \textit{DocTT} è la parte che mostra l'albero
+di tagging attualmente in uso come un elenco puntato espandibile per ogni
+sottosezione presente.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{figures/treeView.png}
+  \caption{Tree View section}
+  \label{fig:treeView}
+\end{figure}
+
+\pagebreak
+
+\subsection{Tree Upload}
+La sezione \textbf{Tree Upload} di \textit{DocTT} è il componente che permette
+l'upload dell'albero di tagging. Offre inoltre un'anteprima dell'albero 
+attualmente in uso (nel caso ci fosse), secondo la stessa visualizzazione 
+della sezione \textbf{Tree View}.
+ 
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{figures/treeUpload.png}
+  \caption{Tree Upload section}
+  \label{fig:treeUpload}
+\end{figure}
+
+\section{Tecnologie}
+DocTT è stato sviluppato in \textbf{Angular}
+\footnote{Angular : Framework per la creazione di UI in TypeScript}
+secondo le direttive fornite dal relatore. È quindi stata divisa \textit{app}
+nelle sottosezioni directives, models, modules, services e shared. I 
+\textit{componenti Angular} sono stati quindi divisi in 3 parti: struttura, 
+stile e funzione rispettivamente secondo i linguaggi \textbf{HTML5}, 
+\textbf{SCSS} e \textbf{TypeScript}.
+
+\subsection{Sottosezione}
 
 \texttt{Questo testo ha una spaziatura fissa}
 
