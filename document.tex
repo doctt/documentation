@@ -185,7 +185,109 @@ I tag sono facilmente rimovibili semplicemente cliccando su di essi.
   \label{fig:tagRemoval}
 \end{figure}
 
+\chapter{Specifiche tecniche}
 
+Qui sotto verranno elencate le specifiche tecniche utilizzate durante lo
+sviluppo del tool.
+
+\section{JavaScript/TypeScript Enviroment}
+
+Durante lo sviluppo del tool il team si è trovato a confronto con l'ambiente
+di sviluppo di \textit{JavaScript/TypeScript} e quindi con le rispettive 
+tecnologie, qui elencate le più significative.
+
+\subsection{Angular}
+
+Come già citato in precedenza, \textbf{Angular} è un \textit{web application
+framework} basato su \textit{TypeScript}. Il concetto principale dietro 
+\textit{Angular} è quello di definire una struttura di base ed una gerarchia
+di componenti, che verranno poi inseriti all'interno del componente principale
+\textit{app} come il riempimento di una cornice vuota.
+
+\subsubsection{App structure}
+
+Essendo \textit{app} il componente principale la sua struttura è fondamentale.
+Noi abbiamo optato per suddividere il tutto, secondo convenzione di 
+\textit{Angular}, in 5 parti:
+
+\begin{description}
+
+  \item[Directives] Le \textit{direttive Angular} sono strumenti che una volta
+  definiti cambiano aspetto e/o comportamento di un elemento del DOM
+  \footnote{DOM (Document Object Model): È una forma di rappresentazione di
+  una pagina web come albero gerarchico}
+  . 
+
+  \item[Models] I \textit{modelli Angular} sono templates che definiscono la
+  struttura di classi o interfacce.
+
+  \item[Components] I \textit{componenti Angular} sono l'elemento base per la
+  costruzione di una UI
+  \footnote{UI: User Interface (Interfaccia Utente)}
+  e sottostanno sempre ad una direttiva e sono spesso costruiti con dei 
+  templates. Sono definiti da tre segmenti: struttura, stile e funzione.  
+
+  \item[Services] I \textit{servizi Angular} sono dei componenti senza 
+  struttura né stile, utilizzati in tutto il complesso per le loro funzioni
+  e le operazioni che offrono. Possono essere visti come della classi statiche
+  di utilità in \textbf{Java}.
+
+  \item[Modules] I \textit{moduli Angular} sono una raccolta di componenti, 
+  servizi, direttive, controller, filtri e informazioni sulla configurazione.
+  Possono essere visti come le frazioni principali di una \textit{app}.
+
+\end{description}
+
+\subsubsection{Routing}
+
+Il routing è una parte fondamentale di una qualunque applicazione front-end
+che si possa definire tale. Grazie ad esso è possibile manovrare 
+un’applicazione in esecuzione attraverso la richiesta di specifici path
+nell’URL. Questo permette di spostarsi attraverso l'applicazione senza 
+continuare a passare da una pagina web all'altra, ma semplicemente andando a
+cambiare i contenuti della pagina attuale secondo le risorse richieste. Ciò 
+comporta meno richieste al server ed un più rapido processo di caricamento
+e \textit{switching} tra pagine/componenti.
+
+\subsection{npm}
+
+\textit{npm} o \textit{Node.js package manager} è un package manager per 
+\textit{JavaScript}. Esso consiste in un client da CLI 
+\footnote{CLI (Command Line Interface): console}
+che permette all'utente di utilizzare e/o distribuire moduli 
+\textit{JavaScript}.
+
+\subsection{Webpack}
+
+Webpack è un \textit{module bundler JavaScript} open-source. Esso permette di 
+definire \textit{loaders, plugins}, ecc., utilizzato per un approccio modulare
+alle \textit{web applications}.
+
+\section{Compilazione e Test}
+
+\subsection{Compilazione}
+
+\subsubsection{npm}
+
+\textit{npm} offre anche la possibilità di definire degli \textit{scripts}
+utilizzabili nel suo client per utilizzi vari, nel nostro caso la compilazione.
+Difatti il nostro progetto è compilabile tramite l'utilizzo del comando
+\textbf{npm run build:dev} sul client \textit{npm}.
+
+\subsection{Test}
+
+\subsubsection{Jest}
+
+\textit{Jest} è un framework di Testing \textit{JavaScript} basato sulla
+semplicità di configurazione ed utilizzo. Permette di definire delle 
+\textit{test suites}, delle collezioni di test che vadano a verificare il
+corretto funzionamento e comportamento delle funzionalità del tool.
+
+\subsubsection{npm}
+
+Anche qui \textit{npm} si rende utile, potendo appunto definire uno
+\textit{script} di testing che lancerà le varie \textit{test suites} per il
+controllo tramite il comando \textbf{npm test}.
 %Citazione:
 %\begin{quote}
 %\lipsum[23]
