@@ -53,14 +53,15 @@
 \setcounter{page}{1}
 
 \chapter*{Abstract}
-\textit{DocTT} (Document Tagging Tool) is a tagging tool (corpus annotation tool)
-which allows its users to tag text documents such as press conferences,
+\textit{DocTT} (Document Tagging Tool) is a tagging tool (corpus annotation 
+tool) which allows its users to tag text documents such as press conferences,
 conference calls or pitches.
 DocTT satisfies the need to switch from outdated tools such as 
-\href{http://www.corpustool.com/}{UAM Corpus Tool} in order to provide an easy, open source,
-multi-platform, lightweight and customizable tool to replace these outdated tools. \\
-The tags take form in coloured rectangles
-surrounding the text allowing a fast and easy visual recognition of a tag.
+\href{http://www.corpustool.com/}{UAM Corpus Tool} in order to provide an easy,
+open source, multi-platform, lightweight and customizable tool to replace 
+these outdated tools. \\
+The tags take form in colored rectangles surrounding the text and allowing 
+a fast and easy visual recognition of a tag.
 Tags are defined through a pre-uploaded tree by the user. The files involved
 (document files and tree files) follow the XML standard and their parsing is 
 managed by the tool.
@@ -68,7 +69,7 @@ managed by the tool.
 \chapter*{Riassunto}
 \textit{DocTT} è uno strumento di tagging di corpus testuale che utilizzato per
 suddividere parti di testo ed assegnare delle etichette a parti di discorsi.
-Il suo impiego principale è il tagging di conference calls, pithces o documenti
+Il suo impiego principale è il tagging di conference calls, pitches o documenti
 testuali in generale.
 
 DocTT soddisfa il bisogno di cambiamento "imposto" da tool come 
@@ -78,7 +79,7 @@ per rimpiazzare questi strumenti. \\
 \\
 I tag sono rappresentati da rettangoli arrotondati e colorati che
 circondano il testo, in modo da fornire un veloce riconoscimento di parti del
-discorso. I tag sono definiti mediante un'albero caricato precedentemente
+discorso. I tag sono definiti mediante un albero caricato precedentemente
 dall'utente. I file utilizzati (file di documento e dell'albero) seguono
 lo standard XML e le convenzioni di UAM Corpus Tool. La loro interpretazione
 è gestita dal nostro strumento.
@@ -101,9 +102,8 @@ lista dei documenti caricati, dalla quale è possibile accedere ai documenti
 singoli e quindi alla loro modifica.
 
 \begin{figure}[h!]
-  \includegraphics[width=\linewidth]{figures/home.png}
-  \caption{Home section}
-  \label{fig:home}
+\includegraphics[width=\linewidth]{figures/home.png}
+\caption{Home section}\label{fig:home}
 \end{figure}
 
 \pagebreak
@@ -115,8 +115,7 @@ browser.
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{figures/docUpload.png}
-  \caption{Document Upload section}
-  \label{fig:docUpload}
+  \caption{Document Upload section}\label{fig:docUpload}
 \end{figure}
 
 \subsection{Tree View}
@@ -126,8 +125,7 @@ sottosezione presente.
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{figures/treeView.png}
-  \caption{Tree View section}
-  \label{fig:treeView}
+  \caption{Tree View section}\label{fig:treeView}
 \end{figure}
 
 \pagebreak
@@ -140,17 +138,16 @@ della sezione \textbf{Tree View}.
  
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{figures/treeUpload.png}
-  \caption{Tree Upload section}
-  \label{fig:treeUpload}
+  \caption{Tree Upload section}\label{fig:treeUpload}
 \end{figure}
 
 \section{Tecnologie}
-DocTT è stato sviluppato in \textbf{Angular}
-\footnote{Angular : Framework JavaScript per la creazione di applicazioni web}
-secondo le direttive fornite dal relatore. È quindi stata divisa \textit{app}
-nelle sottosezioni directives, models, modules, services e shared. I 
-\textit{componenti Angular} sono stati quindi divisi in 3 parti: struttura, 
-stile e funzione rispettivamente secondo i linguaggi \textbf{HTML5}, 
+DocTT è stato sviluppato in \textbf{Angular}\footnote{Angular: Framework 
+		JavaScript per la creazione di applicazioni web} secondo le direttive 
+fornite dal relatore. È quindi stata divisa \textit{app} nelle sottosezioni 
+directives, models, modules, services e shared. I \textit{componenti Angular} 
+sono stati quindi divisi in 3 parti: struttura, stile e funzione 
+rispettivamente secondo i linguaggi \textbf{HTML5}, 
 \textbf{SCSS} e \textbf{TypeScript}.
 
 \chapter{Funzionamento}
@@ -171,8 +168,7 @@ quale tag attrubuire alla selezione.
 \begin{figure}[h!]
   \centering
   \includegraphics[width=7cm]{figures/floatingTag.png}
-  \caption{Floating Tagging Menu}
-  \label{fig:floatingTag}
+  \caption{Floating Tagging Menu}\label{fig:floatingTag}
 \end{figure}
 
 \pagebreak
@@ -184,23 +180,21 @@ essere contenuti in un altro tag (o più).
 
 \begin{figure}[h!]
   \includegraphics[width=\linewidth]{figures/nestedTags.png}
-  \caption{Nested Tags Example}
-  \label{fig:nestedTags}
+  \caption{Nested Tags Example}\label{fig:nestedTags}
 \end{figure}
 
 \subsection{Tag View}
 
-Una volta taggata uan parte di testo, è possibile vedere quale tag è applicato
+Una volta taggata una parte di testo, è possibile vedere quale tag è applicato
 in quella sezione semplicemente portando il cursore sopra il suddetto tag.
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=7cm]{figures/sample.jpg}
-  \caption{Tag View}
-  \label{fig:tagView}
+  \includegraphics[width=7cm]{figures/tagview.png}
+  \caption{Tag View}\label{fig:tagView}
 \end{figure}
 
-\subsection{Tag removal}
+\subsection{Rimozione di tag}
 
 I tag sono facilmente rimovibili semplicemente cliccando su di essi.
 
@@ -246,17 +240,15 @@ Noi abbiamo optato per suddividere il tutto, secondo convenzione di
 \begin{description}
 
   \item[Directives] Le \textit{direttive Angular} sono strumenti che una volta
-  definiti cambiano aspetto e/o comportamento di un elemento del DOM
-  \footnote{DOM (Document Object Model): È una forma di rappresentazione di
-  una pagina web come albero gerarchico}
-  . 
+  definiti cambiano aspetto e/o comportamento di un elemento del 
+  DOM\footnote{DOM (Document Object Model): È una forma di rappresentazione di
+  una pagina web come albero gerarchico}. 
 
   \item[Models] I \textit{modelli Angular} sono templates che definiscono la
   struttura di classi o interfacce.
 
   \item[Components] I \textit{componenti Angular} sono l'elemento base per la
-  costruzione di una UI
-  \footnote{UI: User Interface (Interfaccia Utente)}
+  costruzione di una UI\footnote{UI:\@ User Interface (Interfaccia Utente)}
   e sottostanno sempre ad una direttiva e sono spesso costruiti con dei 
   templates. Sono definiti da tre segmenti: struttura, stile e funzione.  
 
@@ -381,62 +373,6 @@ capace di effettuare il tagging in automatico dei documenti. Un'aggiunta
 possibile sarebbe quella di interfacciare il tool con il lavoro del masterando
 e quindi al momento dell'upload di un documento effettuare questo tagging
 automatico iniziale sul quale poi l'utente andrà a lavorare.
-
-%Citazione:
-%\begin{quote}
-%\lipsum[23]
-%\end{quote}
-
-%\lipsum[13]
-
-%\begin{itemize}
-%  \item Elemento A
-%  \item Elemento B
-%  \item Elemento C
-%\end{itemize}
-
-%\begin{itemize}
-%  \item[-] Elemento A
-%  \item[-] Elemento B
-%  \item[-] Elemento C
-%\end{itemize}
-%
-%\begin{enumerate}
-%  \item Alpha
-%  \item Beta
-%  \item Gamma
-%\end{enumerate}
-
-%\lipsum[23]
-%\section{Sezione}
-%
-%\lipsum[23]
-%
-%\subsection{Sotto sezione}
-%
-%Un po' di matematica: \newline
-%
-%\begin{math}
-%\frac{n!}{k!(n-k)!} = {n \choose k}
-%\end{math} \newline
-%
-%Un po' di matematica centrata:
-%
-%\begin{center}
-%\begin{math}
-%\frac{n!}{k!(n-k)!} = {n \choose k}
-%\end{math}
-%\end{center}
-%
-%Oppure con \$\$
-%
-%$$
-%\frac{n!}{k!(n-k)!} = {n \choose k}
-%$$
-%
-%Oppure anche direttamente nel testo ${1}\over{n}$ \\
-%
-%\lipsum[23]
 
 \bibliographystyle{unsrt}
 \bibliography{bibliografia}
