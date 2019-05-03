@@ -2,6 +2,7 @@
 \documentclass[twoside]{supsistudent} 
 \usepackage{graphicx}
 \usepackage{subcaption}
+\usepackage{hyperref}
 
 % per settare noindent
 \setlength{\parindent}{0pt}
@@ -52,15 +53,35 @@
 \setcounter{page}{1}
 
 \chapter*{Abstract}
-\textit{DocTT} is a tagging tool which allows its users to tag text documents such as
-press conferences or pitches. The tags take form in coloured rectangles
+\textit{DocTT} (Document Tagging Tool) is a tagging tool (corpus annotation tool)
+which allows its users to tag text documents such as press conferences,
+conference calls or pitches.
+DocTT satisfies the need to switch from outdated tools such as 
+\href{http://www.corpustool.com/}{UAM Corpus Tool} in order to provide an easy, open source,
+multi-platform, lightweight and customizable tool to replace these outdated tools. \\
+The tags take form in coloured rectangles
 surrounding the text allowing a fast and easy visual recognition of a tag.
 Tags are defined through a pre-uploaded tree by the user. The files involved
 (document files and tree files) follow the XML standard and their parsing is 
 managed by the tool.
 
 \chapter*{Riassunto}
-\lipsum[10]
+\textit{DocTT} è uno strumento di tagging di corpus testuale che utilizzato per
+suddividere parti di testo ed assegnare delle etichette a parti di discorsi.
+Il suo impiego principale è il tagging di conference calls, pithces o documenti
+testuali in generale.
+
+DocTT soddisfa il bisogno di cambiamento "imposto" da tool come 
+\href{http://www.corpustool.com/}{UAM Corpus Tool} e fornisce 
+un'alternativa open source multi-piattaforma, leggera e personalizzabile
+per rimpiazzare questi strumenti. \\
+\\
+I tag sono rappresentati da rettangoli arrotondati e colorati che
+circondano il testo, in modo da fornire un veloce riconoscimento di parti del
+discorso. I tag sono definiti mediante un'albero caricato precedentemente
+dall'utente. I file utilizzati (file di documento e dell'albero) seguono
+lo standard XML e le convenzioni di UAM Corpus Tool. La loro interpretazione
+è gestita dal nostro strumento.
 
 \chapter{Introduzione}
 
@@ -125,7 +146,7 @@ della sezione \textbf{Tree View}.
 
 \section{Tecnologie}
 DocTT è stato sviluppato in \textbf{Angular}
-\footnote{Angular : Framework per la creazione di UI in TypeScript}
+\footnote{Angular : Framework JavaScript per la creazione di applicazioni web}
 secondo le direttive fornite dal relatore. È quindi stata divisa \textit{app}
 nelle sottosezioni directives, models, modules, services e shared. I 
 \textit{componenti Angular} sono stati quindi divisi in 3 parti: struttura, 
@@ -317,6 +338,16 @@ All'inizio del progetto ci sono state piccole incomprensioni che hanno portato
 ad un'errata implementazione, come anche lo scoprire a progetto già inoltrato
 che l'albero di tagging avesse delle condizioni di tagging come restrizioni
 di tipo simil-logico sul concetto di \textit{either-or} o \textit{if-then}.
+
+\section{Mancanza di specifiche}
+
+Essendo il tool UAM Corpus Tool (tool di riferimento dal quale dovevamo
+effettuare l'integrazione) mal documentato e closed-source, abbiamo avuto
+notevoli difficoltà nel capire certi tipi di scelte effettuate dagli
+sviluppatori del tool. Non essendo disponibile una specifica, 
+il nostro tentativo è una specie di reverse-engineering basato sull'
+analisi dei file esportati mediante UAM Corpus Tool. La compatibilità
+completa non è quindi garantita, specie con versioni precedenti alla 3.3.
 
 \chapter{Piani futuri}
 
