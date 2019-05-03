@@ -160,10 +160,10 @@ nelle apposite sezioni del tool.
 
 \subsection{Floating menu}
 
-La procedura effettiva di tagging viene effettuata selezionando del testo, al
-completamento di questa operazione apparirà un menu alla fine della selezione,
-contenente l'albero di tagging dal quale l'utente potrà andare a scegliere
-quale tag attrubuire alla selezione.
+La procedura effettiva di tagging viene effettuata selezionando del testo, 
+utilizzando il cursore: al completamento di questa operazione apparirà un menu 
+alla fine della selezione, contenente l'albero di tagging dal quale l'utente 
+potrà scegliere quale tag attribuire alla selezione.
 
 \begin{figure}[h!]
   \centering
@@ -268,7 +268,7 @@ Noi abbiamo optato per suddividere il tutto, secondo convenzione di
 Il routing è una parte fondamentale di una qualunque applicazione front-end
 che si possa definire tale. Grazie ad esso è possibile manovrare 
 un’applicazione in esecuzione attraverso la richiesta di specifici path
-nell’URL. Questo permette di spostarsi attraverso l'applicazione senza 
+nell'URL.\@ Questo permette di spostarsi attraverso l'applicazione senza 
 continuare a passare da una pagina web all'altra, ma semplicemente andando a
 cambiare i contenuti della pagina attuale secondo le risorse richieste. Ciò 
 comporta meno richieste al server ed un più rapido processo di caricamento
@@ -318,7 +318,7 @@ controllo tramite il comando \textbf{npm test}.
 
 \section{Nuovo ambiente}
 
-Un grosso problema è stato il "nuovo ambiente" con cui ci si è dovuti 
+Un grosso problema è stato il `nuovo ambiente' con cui ci si è dovuti 
 confrontare quale il mondo di \textit{Angular}. Essendo un requisito imposto
 abbiamo dovuto adattarci ed imparare il framework nel minor tempo possibile
 per essere subito operativi e concentrarci sulla funzionalità del tool e le
@@ -364,6 +364,17 @@ componente non viene rilevato e quindi non viene rimosso il tag.
 Come accennato nel capitolo precedente la scoperta delle restrizioni
 simil-logiche hanno portato problemi durante lo sviluppo, uno dei piani futuri
 è appunto quello di implementare correttamente questa feature.
+
+\subsection{Salvataggio su localStorage ed esportazione in XML}
+
+Sfortunatamente per una questione di tempo non ci è stato possibile 
+implementare una funzionalità di salvataggio dei documenti una volta taggati,
+conseguentemente i cambiamenti al cambio della pagina non vengono salvati.
+
+In uno sviluppo futuro è senz'altro necessario implementare un salvataggio
+dei documenti almeno nel localStorage, dopodiché inserire un layer di
+esportazione in XML (compatibile con UAM Corpus Tool) ed in un formato
+future-proof e meglio organizzato (come per esempio JSON / Protobuf).
 
 \subsection{Interfaccia con IA}
 
